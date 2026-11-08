@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAHMOUD FARHAT | 3MO NGM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        .container {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            max-width: 580px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* الهيدر */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00e5ff;
+            padding: 3px;
+            margin-bottom: 1rem;
+            background-color: #0d1117;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-bottom: 0.2rem;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #00e5ff;
+            letter-spacing: 3px;
+        }
+
+        /* قسم البيانات */
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: #0d1117;
+            border: 1px solid #21262d;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+        }
+
+        .info-item .label {
+            color: #8b949e;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-item .value {
+            color: #00e5ff;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        /* العناوين */
+        .section-title {
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #00e5ff;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* المهارات والخدمات */
+        .list-section {
+            margin-bottom: 2rem;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #21262d;
+            color: #c9d1d9;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-item .icon {
+            font-size: 1.2rem;
+            background: #0d1117;
+            padding: 0.4rem;
+            border-radius: 8px;
+            border: 1px solid #21262d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 40px;
+            margin-top: 2px;
+        }
+
+        .list-item span.text {
+            flex: 1;
+            line-height: 1.6;
+            padding-top: 2px;
+            word-break: break-word;
+        }
+
+        /* أزرار التواصل */
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid #30363d;
+            background: #0d1117;
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            border-color: #00e5ff;
+            background: #161b22;
+            color: #00e5ff;
+        }
+
+        .btn.telegram:hover {
+            border-color: #29b6f6;
+            color: #29b6f6;
+        }
+
+        .btn.whatsapp:hover {
+            border-color: #25D366;
+            color: #25D366;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            color: #484f58;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 2rem 1.2rem; }
+            .header h1 { font-size: 1.7rem; }
+            .list-item { font-size: 0.95rem; gap: 0.6rem; }
+            .list-item .icon { min-width: 35px; padding: 0.3rem; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- الهيدر -->
+        <div class="header">
+            <img src="https://i.postimg.cc/7PTZsDg9/6acc8bff0cd8c7670d163408fb8a1ddd.jpg" alt="Mahmoud Farhat" />
+            <h1>MAHMOUD FARHAT</h1>
+            <div class="subtitle">3MO NGM</div>
+        </div>
+
+        <!-- البيانات الشخصية -->
+        <div class="info-list">
+            <div class="info-item">
+                <span class="label">المحافظة</span>
+                <span class="value">الغربية</span>
+            </div>
+            <div class="info-item">
+                <span class="label">العمر</span>
+                <span class="value">19 عاماً</span>
+            </div>
+            <div class="info-item">
+                <span class="label">التخصص</span>
+                <!-- تم إضافة C++ مع استخدام dir="ltr" عشان الترتيب يبان صح -->
+                <span class="value" dir="ltr">Python, C++ & Web Dev</span>
+            </div>
+        </div>
+
+        <!-- المهارات -->
+        <div class="list-section">
+            <div class="section-title">SKILLS</div>
+            <div class="list-item">
+                <span class="icon">🤖</span>
+                <span class="text">تطوير بوتات تيليجرام</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">🌐</span>
+                <span class="text">HTML / CSS / JavaScript</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">⚛️</span>
+                <span class="text">Next.js</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">🧠</span>
+                <span class="text">دمج تقنيات الذكاء الاصطناعي (AI)</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">🆔</span>
+                <span class="text">REST APIs</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">💻</span>
+                <span class="text">C++</span>
+            </div>
+        </div>
+
+        <!-- الخدمات -->
+        <div class="list-section">
+            <div class="section-title">WHAT I CAN OFFER</div>
+            <div class="list-item">
+                <span class="icon">🤖</span>
+                <span class="text">برمجة بوتات تيليجرام حسب طلبك</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">⚡</span>
+                <span class="text">أدوات <span dir="ltr">Python & C++</span> لأي تخصص</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">🎨</span>
+                <span class="text">تصميم وتطوير مواقع ويب حديثة وسريعة</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">🔗</span>
+                <span class="text">ربط أي مشروع بواجهات API</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">🛠️</span>
+                <span class="text">تطوير أدوات مخصصة</span>
+            </div>
+            <div class="list-item">
+                <span class="icon">💡</span>
+                <span class="text">تعديل، إصلاح، وتحسين المشاريع البرمجية</span>
+            </div>
+        </div>
+
+        <!-- التواصل -->
+        <div class="list-section">
+            <div class="section-title">CONTACT</div>
+            <div class="contact-section">
+                <a href="https://t.me/OOOi2O" target="_blank" class="btn telegram">
+                    📱 تليجرام
+                </a>
+                <a href="https://wa.me/201551040883" target="_blank" class="btn whatsapp">
+                    💬 واتساب
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            3MO NGM
+        </div>
+    </div>
+
+</body>
+</html>
